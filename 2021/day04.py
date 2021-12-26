@@ -28,7 +28,7 @@ def get_score(board, draws):
 
 
 # Parse the puzzle input file.
-with open("Advent of Code\\2021\\day04.txt") as puzzle_input:
+with open("2021\\day04.txt") as puzzle_input:
   draws, *boards = puzzle_input.read().split("\n\n")
   draws = list(map(int, draws.strip().split(',')))
   boards = set(
