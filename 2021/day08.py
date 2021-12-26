@@ -31,8 +31,10 @@ def sum_segments(digit, frequencies):
 # Parse the puzzle input file.
 with open("2021\day08.txt") as puzzle_input:
   signals = [
-    [digits.strip().split(" ")
-    for digits in signal.split("|")]
+    [
+      digits.strip().split(" ")
+      for digits in signal.split("|")
+    ]
     for signal in puzzle_input.read().splitlines()
   ]
 
