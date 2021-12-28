@@ -18,7 +18,7 @@ def get_basin_size(heightmap, y, x, height, memo = set()):
 
 
 # Parse the puzzle input file.
-with open("2021\day09.txt") as puzzle_input:
+with open("2021\\day09.txt") as puzzle_input:
   heightmap = [
     [int(height) for height in line.strip()]
     for line in puzzle_input.read().splitlines()

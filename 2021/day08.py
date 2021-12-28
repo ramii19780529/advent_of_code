@@ -29,7 +29,7 @@ def sum_segments(digit, frequencies):
 
 
 # Parse the puzzle input file.
-with open("2021\day08.txt") as puzzle_input:
+with open("2021\\day08.txt") as puzzle_input:
   signals = [
     [
       digits.strip().split(" ")

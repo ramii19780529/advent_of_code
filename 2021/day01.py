@@ -13,7 +13,7 @@ def sonar_sweep_increases(data, window = 1):
 
 
 # Parse the puzzle input file.
-with open("2021\day01.txt") as puzzle_input:
+with open("2021\\day01.txt") as puzzle_input:
   sonar_sweep_report = [
     int(sea_floor_depth)
     for sea_floor_depth in puzzle_input.read().splitlines()

@@ -3,7 +3,7 @@
 
 
 # Parse the puzzle input file.
-with open("2021\day10.txt") as puzzle_input:
+with open("2021\\day10.txt") as puzzle_input:
   navigation_subsystem = [line.strip() for line in puzzle_input]
 
 # Set up two lists containing the open chunk
