@@ -8,8 +8,8 @@ with open("2021\\day10.txt") as puzzle_input:
 
 # Set up two lists containing the open chunk
 # characters and the close chunk charaters.
-open_chunk = ['(','[','{','<']
-close_chunk = [')',']','}','>']
+open_chunk = ["(","[","{","<"]
+close_chunk = [")","]","}",">"]
 
 # Initialize the variables that will hold the answers.
 part_one, part_two = 0, []

@@ -40,12 +40,12 @@ def find_path(cave, repeat, path = tuple(), memo = {}):
 with open("2021\\day12.txt") as puzzle_input:
   cave_map = {}
   for connection in puzzle_input:
-    caves = connection.strip().split('-')
+    caves = connection.strip().split("-")
     add_caves(caves[0], caves[1])
     add_caves(caves[1], caves[0])
 
 # Part one.
-print(find_path('start', False))
+print(find_path("start", False))
 
 # Part two.
-print(find_path('start', True))
+print(find_path("start", True))

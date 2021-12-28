@@ -30,7 +30,7 @@ def common_bits(data, bit_function, bits):
   # Used for part one to find the least / most common bit for each
   # position in the list of 12 digit binary numbers. The "bit_function"
   # accepts the functions "least" or "most".
-  return ''.join([bit_function(data, bit) for bit in range(bits)])
+  return "".join([bit_function(data, bit) for bit in range(bits)])
 
 
 def filter_bits(data, bit_function, bits):
