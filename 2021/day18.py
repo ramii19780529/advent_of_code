@@ -85,6 +85,6 @@ max_magnitude = 0
 for a in snailfish_numbers:
   for b in snailfish_numbers:
     if a == b: continue
-    total =  magnitude(add(a, b))
+    total = magnitude(add(a, b))
     if total > max_magnitude: max_magnitude = total
 print(max_magnitude)

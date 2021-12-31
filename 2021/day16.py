@@ -5,7 +5,7 @@
 class HexStringBitReader:
     # I decided to make a class to read the stream of hex characters as
     # ints so tracking the index would be managed in the object instead
-    # of manually after each read of the string, and without destroying 
+    # of manually after each read of the string, and without destroying
     # the original data.
 
     def __init__(self, hex_string):
@@ -16,7 +16,7 @@ class HexStringBitReader:
 
     def get_int(self, bits):
         self.index += bits
-        return int(self.bin_data[self.index - bits : self.index], 2)
+        return int(self.bin_data[self.index - bits: self.index], 2)
 
 
 def get_header(data):
@@ -62,7 +62,7 @@ def sub_packet_literal(data):
     while True:
         another_nibble = data.get_int(1)
         nibble = data.get_int(4)
-        number = number<<4 | nibble
+        number = number << 4 | nibble
         if not another_nibble:
             break
     return number

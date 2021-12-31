@@ -29,8 +29,8 @@ def get_fuel(positions, part):
 with open("2021\\day07.txt") as puzzle_input:
   crab_position = eval(puzzle_input.read())
 
-#Part one.
+# Part one.
 print(get_fuel(crab_position, 1))
 
-#Part two.
+# Part two.
 print(get_fuel(crab_position, 2))

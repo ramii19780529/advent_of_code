@@ -21,7 +21,7 @@ def get_score(board, draws):
   # board using the specified rules.
   score = 0
   for row in board:
-     for number in row:
+    for number in row:
       if number not in draws:
         score += number
   return score * draws[-1]
@@ -33,7 +33,7 @@ with open("2021\\day04.txt") as puzzle_input:
   draws = list(map(int, draws.strip().split(",")))
   boards = set(
     tuple(
-      tuple(map(int,number.split()))
+      tuple(map(int, number.split()))
       for number in row.splitlines()
     )
     for row in boards

@@ -36,8 +36,8 @@ def get_dots(x_border, y_border, show):
   for y in range(y_border):
     for x in range(x_border):
       dot = " #"[(x, y) in dots]
-      if show: print(dot,  end = " ")
-      total_dots += [0,1][dot == "#"]
+      if show: print(dot, end = " ")
+      total_dots += [0, 1][dot == "#"]
     if show: print("")
   return total_dots
 

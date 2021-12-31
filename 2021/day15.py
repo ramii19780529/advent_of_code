@@ -38,21 +38,21 @@ def get_lowest_risk(grid):
 
 # Parse the puzzle input file.
 with open("2021\\day15.txt") as puzzle_input:
-  chiton_risk_map = [
+  risk_map = [
     [*map(int, row)]
     for row in puzzle_input.read().splitlines()
   ]
 
 # Part one.
-print(get_lowest_risk(chiton_risk_map))
+print(get_lowest_risk(risk_map))
 
 # Part two.
-chiton_risk_full_map = []
+full_risk_map = []
 for y in range(5):
-  for i, row in enumerate(chiton_risk_map):
-    chiton_risk_full_map.append([])
+  for i, row in enumerate(risk_map):
+    full_risk_map.append([])
     for x in range(5):
       for risk in row:
         new_risk = (risk + x + y - 1) % 9 + 1
-        chiton_risk_full_map[i + (y * len(chiton_risk_map[i]))].append(new_risk)
-print(get_lowest_risk(chiton_risk_full_map))
+        full_risk_map[i + (y * len(risk_map[i]))].append(new_risk)
+print(get_lowest_risk(full_risk_map))

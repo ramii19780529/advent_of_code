@@ -28,7 +28,7 @@ with open("2021\\day11.txt") as puzzle_input:
   # The boolean in the list is used to track if
   # the octopus has already flashed in the step.
   octopi = {
-    (x, y):[int(energy), False]
+    (x, y): [int(energy), False]
     for y, line in enumerate(puzzle_input)
     for x, energy in enumerate(line.strip())
   }

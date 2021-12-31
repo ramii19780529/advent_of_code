@@ -33,7 +33,7 @@ def the_answer(pairs):
 with open("2021\\day14.txt") as puzzle_input:
   polymer_template, pair_insertion_rules = puzzle_input.read().split("\n\n")
   pair_insertion_rules = {
-    pair_insertion.split(" -> ")[0]:pair_insertion.split(" -> ")[1]
+    pair_insertion.split(" -> ")[0]: pair_insertion.split(" -> ")[1]
     for pair_insertion in pair_insertion_rules.splitlines()
   }
 
@@ -42,7 +42,7 @@ with open("2021\\day14.txt") as puzzle_input:
 # created in each step. Since the question doesn't ask for the full
 # polymer string, we don't need to keep track of that.
 polymer_pairs = {
-  pair:polymer_template.count(pair)
+  pair: polymer_template.count(pair)
   for pair in [
     polymer_template[i:i + 2]
     for i in range(len(polymer_template) - 1)

@@ -21,11 +21,11 @@ def get_points(x1, y1, x2, y2, diagonals):
 # Parse the puzzle input file.
 with open("2021\\day05.txt") as puzzle_input:
   vent_lines = tuple(
-      tuple(
-          tuple(map(int,points.split(",")))
-          for points in line.split("->")
-      )
-      for line in puzzle_input.read().splitlines()
+    tuple(
+      tuple(map(int, points.split(",")))
+      for points in line.split("->")
+    )
+    for line in puzzle_input.read().splitlines()
   )
 
 # Part one.

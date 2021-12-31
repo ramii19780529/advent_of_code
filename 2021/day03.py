@@ -61,7 +61,7 @@ print(power_consumption)
 oxygen_generator_rating = filter_bits(diagnostic_report, most, 12)
 co2_scrubber_rating = filter_bits(diagnostic_report, least, 12)
 life_support_rating = (
-    int(oxygen_generator_rating, 2)
+  int(oxygen_generator_rating, 2)
   * int(co2_scrubber_rating, 2)
 )
 print(life_support_rating)

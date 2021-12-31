@@ -10,7 +10,7 @@ def get_basin_size(heightmap, y, x, height, memo = set()):
   if heightmap[y][x] == 9 or height > heightmap[y][x]: return 0
   memo.add((y, x))
   return 1 + (
-      get_basin_size(heightmap, y + 1, x, heightmap[y][x], memo)
+    get_basin_size(heightmap, y + 1, x, heightmap[y][x], memo)
     + get_basin_size(heightmap, y - 1, x, heightmap[y][x], memo)
     + get_basin_size(heightmap, y, x + 1, heightmap[y][x], memo)
     + get_basin_size(heightmap, y, x - 1, heightmap[y][x], memo)
@@ -32,7 +32,7 @@ basin_sizes = []
 for y, row in enumerate(heightmap):
   for x, height in enumerate(row):
     if not (
-         (y > 0 and height >= heightmap[y - 1][x])
+      (y > 0 and height >= heightmap[y - 1][x])
       or (y < (len(heightmap) - 1) and height >= heightmap[y + 1][x])
       or (x > 0 and height >= heightmap[y][x - 1])
       or (x < (len(row) - 1) and height >= heightmap[y][x + 1])
