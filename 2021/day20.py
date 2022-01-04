@@ -54,7 +54,7 @@ def enhance_image(data, algorithm):
 
 
 # Parse the puzzle input file.
-with open("Advent of Code\\2021\\day20.txt") as puzzle_input:
+with open("2021\\day20.txt") as puzzle_input:
   image_enhancement_algorithm, input_image = puzzle_input.read().split("\n\n")
   input_image = {
     (x, y): pixel
