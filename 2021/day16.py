@@ -16,7 +16,7 @@ class HexStringBitReader:
 
     def get_int(self, bits):
         self.index += bits
-        return int(self.bin_data[self.index - bits: self.index], 2)
+        return int(self.bin_data[self.index - bits : self.index], 2)
 
 
 def get_header(data):
@@ -109,7 +109,7 @@ def read_packets(data):
 
 # Parse the puzzle input file.
 with open("2021\\day16.txt") as puzzle_input:
-  bits = HexStringBitReader(puzzle_input.read().strip())
+    bits = HexStringBitReader(puzzle_input.read().strip())
 
 # Parts one and two.
 versions = 0

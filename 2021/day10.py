@@ -4,7 +4,7 @@
 
 # Parse the puzzle input file.
 with open("2021\\day10.txt") as puzzle_input:
-  navigation_subsystem = [line.strip() for line in puzzle_input]
+    navigation_subsystem = [line.strip() for line in puzzle_input]
 
 # Set up two lists containing the open chunk
 # characters and the close chunk charaters.
@@ -31,13 +31,14 @@ for chunks in navigation_subsystem:
             close_characters.append(close_chunk[open_chunk.index(character)])
         elif character in close_chunk:
             if close_characters:
-              if not character == close_characters.pop():
-                part_one += [3, 57, 1197, 25137][close_chunk.index(character)]
-                close_characters = []
-                break
+                if not character == close_characters.pop():
+                    part_one += [3, 57, 1197, 25137][close_chunk.index(character)]
+                    close_characters = []
+                    break
     for character in reversed(close_characters):
         score = score * 5 + close_chunk.index(character) + 1
-    if close_characters: part_two.append(score)
+    if close_characters:
+        part_two.append(score)
 
 # Part one.
 print(part_one)

@@ -3,23 +3,23 @@
 
 
 def step(x_velocity, y_velocity):
-  # This generator returns the x, y position along with the current
-  # velocity of x after each step using the initial x an y velocities.
-  x = 0
-  y = 0
-  while True:
-    x += x_velocity
-    y += y_velocity
-    y_velocity -= 1
-    x_velocity -= (x_velocity >= 0) - (x_velocity <= 0)
-    yield x, y, x_velocity
+    # This generator returns the x, y position along with the current
+    # velocity of x after each step using the initial x an y velocities.
+    x = 0
+    y = 0
+    while True:
+        x += x_velocity
+        y += y_velocity
+        y_velocity -= 1
+        x_velocity -= (x_velocity >= 0) - (x_velocity <= 0)
+        yield x, y, x_velocity
 
 
 # Parse the puzzle input file.
 with open("2021\\day17.txt") as puzzle_input:
-  area = puzzle_input.read().strip()[13:].split(", ")
-  min_box_x, max_box_x = map(int, area[0][2:].split(".."))
-  min_box_y, max_box_y = map(int, area[1][2:].split(".."))
+    area = puzzle_input.read().strip()[13:].split(", ")
+    min_box_x, max_box_x = map(int, area[0][2:].split(".."))
+    min_box_y, max_box_y = map(int, area[1][2:].split(".."))
 
 # The minimum x velocity is the lowest velocity that will allow the
 # probe to enter the target area as the velocity drops to zero. Based
@@ -51,14 +51,17 @@ max_y_velocity = abs(min_box_y)
 # out faster, but I don't know it.
 data = set()
 for y_velocity in range(min_y_velocity, max_y_velocity):
-  for x_velocity in range(min_x_velocity, max_x_velocity):
-    max_y = 0
-    for x, y, current_x_velocity in step(x_velocity, y_velocity):
-      if y < min_box_y: break
-      if current_x_velocity == 0 and (min_box_x > x > max_box_x): break
-      if y > max_y: max_y = y
-      if min_box_x <= x <= max_box_x and min_box_y <= y <= max_box_y:
-        data.add((x_velocity, y_velocity, max_y))
-        break
+    for x_velocity in range(min_x_velocity, max_x_velocity):
+        max_y = 0
+        for x, y, current_x_velocity in step(x_velocity, y_velocity):
+            if y < min_box_y:
+                break
+            if current_x_velocity == 0 and (min_box_x > x > max_box_x):
+                break
+            if y > max_y:
+                max_y = y
+            if min_box_x <= x <= max_box_x and min_box_y <= y <= max_box_y:
+                data.add((x_velocity, y_velocity, max_y))
+                break
 print(max(data, key=lambda x: x[2])[2])
 print(len(data))
