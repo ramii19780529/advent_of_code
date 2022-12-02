@@ -9,6 +9,7 @@ rps_shapes = {
     "Y": "Paper",
     "Z": "Scissors",
 }
+
 rps_response = {
     "A": ["C", "A", "B"],
     "B": ["A", "B", "C"],
