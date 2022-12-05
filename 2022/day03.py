@@ -4,9 +4,7 @@
 
 def get_priority(rucksacks) -> int:
     for item in rucksacks.pop().intersection(*rucksacks):
-        if ord(item) >= 97:
-            return ord(item) - 96
-        return ord(item) - 38
+        return (ord(item) - 38) % 58  # See notes.
 
 
 priorities = [0, 0]
@@ -25,3 +23,12 @@ with open("advent_of_code\\2022\\day03.txt") as puzzle_input:
             rucksacks = []
 
 print(priorities)
+
+# Notes:
+# I used the following to figure out if the items had a single equation that would
+# provide the correct priority. Turns out they did, so I updated the code to use it.
+#   for i in range(1, 100):
+#       for j in range(1, 100):
+#           if (90 - i) % j == 52:
+#               if (122 - i) % j == 26:
+#                   print(i, j)
