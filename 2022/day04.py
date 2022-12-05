@@ -7,16 +7,11 @@ with open("advent_of_code\\2022\\day04.txt") as puzzle_input:
         [*map(int, sections.replace("-", ",").split(","))]
         for sections in puzzle_input.read().splitlines()
     ]
-    for s in sections:
-        if s[0] >= s[2] and s[1] <= s[3]:
+    for a, b, c, d in sections:
+        if (a >= c and b <= d) or (a <= c and b >= d):
             overlap[0] += 1
             overlap[1] += 1
-        elif s[0] <= s[2] and s[1] >= s[3]:
-            overlap[0] += 1
-            overlap[1] += 1
-        elif s[0] >= s[2] and s[0] <= s[3]:
-            overlap[1] += 1
-        elif s[1] >= s[2] and s[1] <= s[3]:
+        elif (c <= a <= d) or (c <= b <= d):
             overlap[1] += 1
 
 print(overlap)
