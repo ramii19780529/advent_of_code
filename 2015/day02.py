@@ -3,7 +3,7 @@
 
 
 # Parse the puzzle input file.
-with open("2015\\day02.txt") as puzzle_input:
+with open("advent_of_code\\2015\\day02.txt") as puzzle_input:
     presents_dimensions = [
         sorted(map(int, present_dimensions.split("x")))
         for present_dimensions in puzzle_input.read().splitlines()

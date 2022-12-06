@@ -3,7 +3,7 @@
 
 
 # Parse the puzzle input file.
-with open("2015\\day01.txt") as puzzle_input:
+with open("advent_of_code\\2015\\day01.txt") as puzzle_input:
     directions = puzzle_input.read().strip()
 
 # Parts one and two.

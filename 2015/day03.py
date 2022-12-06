@@ -22,7 +22,7 @@ def get_house(directions, santas):
 
 
 # Parse the puzzle input file.
-with open("2015\\day03.txt") as puzzle_input:
+with open("advent_of_code\\2015\\day03.txt") as puzzle_input:
     directions = puzzle_input.read().strip()
 
 # Part one.
