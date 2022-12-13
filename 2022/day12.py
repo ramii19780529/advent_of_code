@@ -5,8 +5,8 @@ from heapq import heappop, heappush
 
 
 def shortest_path(grid, start, ends, direction):
-    # This function returns the shortest path in
-    # the grid using a Dijkstra-like algorithm.
+    # This function returns the shortest path in the grid
+    # from the start point to one of the ends.
     next_node = []
     visited = set()
     heappush(next_node, (0, start))
@@ -18,11 +18,10 @@ def shortest_path(grid, start, ends, direction):
         if (x, y) in ends:
             return steps
         visited.add((x, y))
-        height = ord(grid[y][x])
         for nx, ny in ((x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)):
             if 0 <= ny < len(grid):
                 if 0 <= nx < len(grid[ny]):
-                    if (ord(grid[ny][nx]) - height) * direction <= 1:
+                    if (ord(grid[ny][nx]) - ord(grid[y][x])) * direction <= 1:
                         heappush(next_node, (steps + 1, (nx, ny)))
 
 
