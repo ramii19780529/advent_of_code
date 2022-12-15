@@ -3,6 +3,8 @@
 
 
 def comp(left, right):
+    # This recursive function returns True if left
+    # is less than right based on the rules.
     if type(left) == int and type(right) == int:
         return left < right
     if type(left) == int:
@@ -27,18 +29,25 @@ with open("advent_of_code\\2022\\day13.txt") as puzzle_input:
     signals = [eval(s) for s in puzzle_input.read().splitlines() if len(s) > 0]
 
     # Part 1
-    good_pairs = []
-    for i in range(0, len(signals) // 2):
-        if comp(signals[i * 2], signals[i * 2 + 1]):
-            good_pairs.append(i + 1)
-    print(sum(good_pairs))
+    print(
+        sum(
+            i + 1
+            for i in range(len(signals) // 2)
+            if comp(signals[i * 2], signals[i * 2 + 1])
+        )
+    )
 
     # Part 2
+
+    # Add the divider packets.
     signals.append([[2]])
     signals.append([[6]])
-    # Using bubble sort.
+
+    # Use a bubble sort to sort the list.
     for i in range(len(signals) - 1, 0, -1):
         for j in range(i):
             if comp(signals[j + 1], signals[j]):
                 signals[j], signals[j + 1] = (signals[j + 1], signals[j])
+
+    # Find the indexes of the two divider packets, multiply, and print.
     print((signals.index([[2]]) + 1) * (signals.index([[6]]) + 1))
