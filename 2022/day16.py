@@ -11,7 +11,7 @@ def routes(valves, time, start="AA", route={}):
     # from valve AA, including the time the valve was reached.
     for valve in valves:
         # Skip the valve if we can't get to it in time.
-        if (new_time := (time - distance[start][valve] - 1)) <= 0:
+        if (new_time := (time - distance[start][valve] - 1)) < 2:
             continue
         yield from routes(
             valves - {valve},
