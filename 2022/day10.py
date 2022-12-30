@@ -2,7 +2,7 @@
 # https://adventofcode.com/2022/day/10
 
 # Parse the puzzle input file.
-with open("advent_of_code\\2022\\day10.txt") as puzzle_input:
+with open("2022\\day10.txt") as puzzle_input:
     instructions = iter([line.split() for line in puzzle_input.read().splitlines()])
     next_instruction = 1
     next_move = 0

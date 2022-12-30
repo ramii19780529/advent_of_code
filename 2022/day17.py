@@ -18,7 +18,7 @@ def move_rock(rock, y, x):
 
 
 # Parse the input into a list.
-with open("advent_of_code\\2022\\day17.txt") as puzzle_input:
+with open("2022\\day17.txt") as puzzle_input:
     jets = list(puzzle_input.read().strip())
     # Hard coding the rocks here.
     rocks = [
@@ -92,7 +92,7 @@ with open("advent_of_code\\2022\\day17.txt") as puzzle_input:
 #        block_start = 26
 #        block_height = 79 - 26
 #        block_rocks = 7 * 5
-with open("advent_of_code\\2022\\day17.out", "w") as puzzle_output:
+with open("2022\\day17.out", "w") as puzzle_output:
     for y in range(1, top):
         for x in range(7):
             puzzle_output.write(".#"[(y, x) in chamber])

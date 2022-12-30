@@ -7,7 +7,7 @@ stacks = {
 }
 
 # Parse the puzzle input file.
-with open("advent_of_code\\2022\\day05.txt") as puzzle_input:
+with open("2022\\day05.txt") as puzzle_input:
     stack_data, moves = puzzle_input.read().split("\n\n")
     # Populate Stacks
     for crates in stack_data.splitlines()[:-1]:

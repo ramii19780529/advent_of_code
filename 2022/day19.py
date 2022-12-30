@@ -95,7 +95,7 @@ def play(blueprints: dict, time: int, count: int) -> int:
 
 
 # Parse the input.
-with open("advent_of_code\\2022\\day19.txt") as puzzle_input:
+with open("2022\\day19.txt") as puzzle_input:
     blueprints = {
         int(line[1][:-1]): (
             (int(line[6]), 0, 0),

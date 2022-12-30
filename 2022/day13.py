@@ -25,7 +25,7 @@ def comp(left, right):
 
 
 # Parse the puzzle input file.
-with open("advent_of_code\\2022\\day13.txt") as puzzle_input:
+with open("2022\\day13.txt") as puzzle_input:
     signals = [eval(s) for s in puzzle_input.read().splitlines() if len(s) > 0]
 
     # Part 1

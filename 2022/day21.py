@@ -33,7 +33,7 @@ def monkey_math(monkey: str, num: int = None) -> int:
 
 
 # Parse the input.
-with open("advent_of_code\\2022\\day21.txt") as puzzle_input:
+with open("2022\\day21.txt") as puzzle_input:
     monkeys = {
         monkey[0]: monkey[1].split()
         for monkey in [line.split(":") for line in puzzle_input.read().splitlines()]

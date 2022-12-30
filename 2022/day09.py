@@ -2,7 +2,7 @@
 # https://adventofcode.com/2022/day/9
 
 # Parse the puzzle input file.
-with open("advent_of_code\\2022\\day09.txt") as puzzle_input:
+with open("2022\\day09.txt") as puzzle_input:
     motions = [
         [line.split()[0], int(line.split()[1])]
         for line in puzzle_input.read().splitlines()

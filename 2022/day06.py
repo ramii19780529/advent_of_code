@@ -11,7 +11,7 @@ def find_start(datastream, start, length):
 
 
 # Parse the puzzle input file.
-with open("advent_of_code\\2022\\day06.txt") as puzzle_input:
+with open("2022\\day06.txt") as puzzle_input:
     datastream = puzzle_input.read()
     part1 = find_start(datastream, 0, 4)
     part2 = find_start(datastream, part1, 14)

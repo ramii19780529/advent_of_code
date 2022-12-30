@@ -5,7 +5,7 @@ current_path = []
 path_size = {}
 
 # Parse the puzzle input file.
-with open("advent_of_code\\2022\\day07.txt") as puzzle_input:
+with open("2022\\day07.txt") as puzzle_input:
     terminal = [line.split() for line in puzzle_input.read().splitlines()]
     for line in terminal:
         if line[0] == "$":

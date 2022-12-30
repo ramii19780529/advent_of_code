@@ -4,7 +4,7 @@
 from math import prod
 
 # Parse the puzzle input file.
-with open("advent_of_code\\2022\\day08.txt") as puzzle_input:
+with open("2022\\day08.txt") as puzzle_input:
     treemap = [[*map(int, line)] for line in puzzle_input.read().splitlines()]
     visible = 0
     scenic = 0

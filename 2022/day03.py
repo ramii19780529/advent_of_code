@@ -9,7 +9,7 @@ def get_priority(rucksacks) -> int:
 
 priorities = [0, 0]
 rucksacks = []
-with open("advent_of_code\\2022\\day03.txt") as puzzle_input:
+with open("2022\\day03.txt") as puzzle_input:
     for rucksack in puzzle_input.read().splitlines():
         # Part 1.
         items_per_compartment = len(rucksack) // 2

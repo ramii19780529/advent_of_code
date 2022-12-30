@@ -3,7 +3,7 @@
 
 
 # Parse the input.
-with open("advent_of_code\\2022\\day18.txt") as puzzle_input:
+with open("2022\\day18.txt") as puzzle_input:
     cubes = {(*map(int, line.split(",")),) for line in puzzle_input.read().splitlines()}
 
     # This was added for part 2 but I found that the performace was better

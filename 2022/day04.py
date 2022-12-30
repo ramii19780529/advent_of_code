@@ -2,7 +2,7 @@
 # https://adventofcode.com/2022/day/4
 
 overlap = [0, 0]
-with open("advent_of_code\\2022\\day04.txt") as puzzle_input:
+with open("2022\\day04.txt") as puzzle_input:
     sections = [
         [*map(int, sections.replace("-", ",").split(","))]
         for sections in puzzle_input.read().splitlines()

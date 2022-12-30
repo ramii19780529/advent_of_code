@@ -5,7 +5,7 @@ import math
 import copy
 
 # Parse the puzzle input file.
-with open("advent_of_code\\2022\\day11.txt") as puzzle_input:
+with open("2022\\day11.txt") as puzzle_input:
     monkeys = [
         [
             [*map(int, monkey[0].split(":")[1].split(","))],  # item worry levels

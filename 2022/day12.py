@@ -26,7 +26,7 @@ def shortest_path(grid, start, ends, direction):
 
 
 # Parse the puzzle input file.
-with open("advent_of_code\\2022\\day12.txt") as puzzle_input:
+with open("2022\\day12.txt") as puzzle_input:
     height_map = [list(row) for row in puzzle_input.read().splitlines()]
     # Set the start and end positions.
     # Part 1, S is the start and E is the end.

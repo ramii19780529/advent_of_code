@@ -23,7 +23,7 @@ def score(data: list):
     print(sum(data[(index + offset) % len(data)] for offset in [1000, 2000, 3000]))
 
 
-with open("advent_of_code\\2022\\day20.txt") as puzzle_input:
+with open("2022\\day20.txt") as puzzle_input:
     encrypted_grove_coordinates = tuple(map(int, puzzle_input))
     score(decrypt(encrypted_grove_coordinates, 1, 1))
     score(decrypt(encrypted_grove_coordinates, 10, 811589153))

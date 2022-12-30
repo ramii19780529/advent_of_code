@@ -2,7 +2,7 @@
 # https://adventofcode.com/2022/day/14
 
 # Parse the puzzle input file.
-with open("advent_of_code\\2022\\day14.txt") as puzzle_input:
+with open("2022\\day14.txt") as puzzle_input:
     cave = set()
     for path in puzzle_input.read().splitlines():
         lines = path.split("->")

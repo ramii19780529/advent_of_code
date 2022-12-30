@@ -23,7 +23,7 @@ def routes(valves, time, start="AA", route={}):
 
 
 # Parse the input into a dictionary as {Valve Label: Flow Rate, [Neighboring Valves]}.
-with open("advent_of_code\\2022\\day16.txt") as puzzle_input:
+with open("2022\\day16.txt") as puzzle_input:
     valves = {
         v[1]: [int(v[5]), v[10:]]
         for v in [
