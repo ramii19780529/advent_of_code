@@ -4,7 +4,7 @@
 
 def get_priority(rucksacks) -> int:
     for item in rucksacks.pop().intersection(*rucksacks):
-        return (ord(item) - 38) % 58  # See notes.
+        return (ord(item) - 38) % 58  # See notes below.
 
 
 priorities = [0, 0]
